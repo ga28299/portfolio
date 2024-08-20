@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  @apply font-poppins;
+  background: radial-gradient(circle, #000000, #311944);
+}
+
+.image-bw {
+  filter: grayscale(100%);
+  transition: filter 0.3s, opacity 0.3s;
+}
+
+.image-bw:hover {
+  filter: grayscale(0%);
+}
+
+.skill-name {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.skill-container:hover .skill-name {
+  opacity: 1;
+}
+
+.star {
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  animation: blink 10s infinite;
+}
+
+.star.small {
+  width: 1px;
+  height: 1px;
+}
+
+.star.medium {
+  width: 2px;
+  height: 2px;
+}
+
+.star.large {
+  width: 3px;
+  height: 3px;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+
+.rotate-180 {
+  transition: transform 0.3s;
+  transform: rotate(180deg);
+}
+
+.rotate-0 {
+  transition: transform 0.3s;
+  transform: rotate(0deg);
+}
+
